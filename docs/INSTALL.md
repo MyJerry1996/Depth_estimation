@@ -6,9 +6,9 @@
     ```
 
 2. Install packages with Python >= 3.6.
-    1. `pip install -r requirements`
+    1. `pip install -r requirements.txt`
     2. `pip install -e .` 
-    3. `pip install -e submodules/MGGAN/`  
+    3. `pip install -e submodules/MG-GAN/`  
     4. `pip install -e submodules/detctron2/` (optional, only needed for panoptic segmentation)  
     5. `pip install -r submodules/AdaBins/requirements.txt` (optional, only needed for depth estimation)  
     6. `pip install -r submodules/AdaBins/` (optional, only needed for depth estimation) 
@@ -26,12 +26,12 @@
 
     For MOT17:
     ````
-    bash downloads/MOT17_data.sh
+    bash downloads/download_MOT17_data.sh
     ````
 
     For MOT20: 
     ```
-    bash downloads/MOT20_data.sh
+    bash downloads/download_MOT20_data.sh
     ````
 
 4. Download pre-processed data
