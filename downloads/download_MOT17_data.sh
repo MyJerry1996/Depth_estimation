@@ -3,12 +3,12 @@ parentdir="$(dirname "$(realpath $0)")"
 bash $parentdir/create_data_folder.sh
 
 
-wget https://motchallenge.net/data/MOT17.zip -O $parentdir/../data/tmp/MOT17.zip
-unzip -o $parentdir/../data/tmp/MOT17.zip -d $parentdir/../data/tmp/tmpMOT17
+# wget https://motchallenge.net/data/MOT17.zip -O $parentdir/../data/tmp/MOT17.zip
+# unzip -o $parentdir/../../dataset/MOT17.zip -d $parentdir/../../dataset/MOT17
 
 mkdir -p $parentdir/../data/MOT17/sequences
-mv $parentdir/../data/tmp/tmpMOT17/MOT17/train/*FRCNN  $parentdir/../data/MOT17/sequences/
-mv $parentdir/../data/tmp/tmpMOT17/MOT17/test/*FRCNN  $parentdir/../data/MOT17/sequences/
+cp -r $parentdir/../../dataset/MOT17/MOT17/train/*FRCNN  $parentdir/../data/MOT17/sequences/
+cp -r $parentdir/../../dataset/MOT17/MOT17/test/*FRCNN  $parentdir/../data/MOT17/sequences/
 
 CURRENTDIR="$(pwd)"
 cd $parentdir/../data/MOT17/sequences/
